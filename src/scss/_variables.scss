@@ -38,3 +38,9 @@ $body-font: 'Capriola', sans-serif;
     100%{background-position:50% 0%}
 	}
 }
+
+%text-gradient {
+			background: -webkit-linear-gradient(#1fbbde, #103752);
+  			-webkit-background-clip: text;
+  			-webkit-text-fill-color: transparent;
+		}

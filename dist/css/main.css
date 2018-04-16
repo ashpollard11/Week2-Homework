@@ -69,13 +69,19 @@ table {
 	border-spacing: 0;
 }
 
+.row .popular h3, .row .popular p {
+	background: -webkit-linear-gradient(#1fbbde, #103752);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Capriola', sans-serif;
+	font-family: "Capriola", sans-serif;
 	background: url(../../src/img/candy-bg.jpg) no-repeat fixed;
 	background-size: cover;
 	color: #3a3a3a;
@@ -119,7 +125,7 @@ p {
 
 h1 {
 	font-size: 1.8em;
-	font-family: 'Fontdiner Swanky', cursive;
+	font-family: "Fontdiner Swanky", cursive;
 }
 
 h1 a {
@@ -219,7 +225,7 @@ footer {
 
 .hero .headline {
 	font-size: 3em;
-	font-family: 'Fontdiner Swanky', cursive;
+	font-family: "Fontdiner Swanky", cursive;
 }
 
 .hero span {
@@ -244,12 +250,6 @@ footer {
 .row .col .button:hover {
 	background: #f396e6;
 	transition: 0.6s;
-}
-
-.row .popular h3 {
-	background: -webkit-linear-gradient(#1fbbde, #103752);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 .candy-rain .drop {
