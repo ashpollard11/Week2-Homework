@@ -18,7 +18,7 @@ TABLE OF CONTENTS:
 
 @import 'variables';
 
-
+@import url('https://fonts.googleapis.com/css?family=Handlee|Raleway:500');
 
 /* 1. Main Layout ================================= */
 
@@ -27,31 +27,68 @@ TABLE OF CONTENTS:
 }
 
 body {
+	font-family: 'Raleway', sans-serif;
 	background: $background-main;
 	color: $primary-color;
 	line-height: 1.6;
+
+	@include bp-tablet {
+		.main-header, .row, nav{
+			display: flex;
+		}
+
+		.main-header {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.col {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+		}
+
+		.col .button {
+			align-self: flex-start;
+			margin-top: auto;
+		}
+
+		.row{
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	@include bp-desktop {
+		.main-header {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+	}
+
 }
 
 p {
-	font-size: 0.9375em;
+	font-size: $em-size - 0.1;
 	margin: 0 0 1em 0;
 }
 
 h1 {
-	font-size: 1.35em;
-	color: $heading-color;
+	font-size: $em-size + 0.8;
 	a {
 		text-align: center;
 		display: block;
 		padding: 10px 15px;
+		color: $heading-color;
 	}
 
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: $em-size + 0.5em;
 	color: $heading-color;
-	padding-bottom: 1em;
+	padding-bottom: $em-size;
 }
 
 a {
@@ -69,7 +106,7 @@ nav {
 		padding: 10px 15px;
 		text-transform: uppercase;
 		color: $accent-color;
-		font-size: 0.95em;
+		font-size: $em-size - 0.05em;
 
 		&:hover {
 		color: $hover-color;
@@ -80,8 +117,8 @@ nav {
 }
 
 footer {
+	@include gradient;
 	text-align: center;
-	background: $background-box;
 	padding: 2em 0;
 	margin-top: 30px;
 }
@@ -97,19 +134,12 @@ footer {
 }
 
 .hero{
+
+	@include gradient;
 	text-align: center;
-	background: linear-gradient(0deg, #e69ddd, #91ddee, #eed891);
-	background-size: 600% 600%;
-	animation: ani-hero 6s ease infinite;
-	color: $heading-color;
+	color: $secondary-color;
 	padding: 3.2em 0;
 	margin-bottom: 48px;
-
-	@keyframes ani-hero { 
-    0%{background-position:50% 0%}
-    50%{background-position:51% 100%}
-    100%{background-position:50% 0%}
-	}
 
 	.peppermint-img {
 		max-width: 100%; /*so img wont get pixelated if resized larger*/
@@ -123,27 +153,49 @@ footer {
 	}
 
 	.headline {
-		font-size: 2em;
+		font-size: $em-size + 2;
+	}
+
+	span {
+		font-size: $em-size + 0.2;
 	}
 }
 
-.col {
-	background: $background-box;
-	padding: 1em;
-	margin: 0 0.5em 0.8em;
-	border-radius: 0.35em;
-}
+.row {
 
-.button {
-	background: $accent-color;
-	padding: 0.625em 1.25em;
-	color: $heading-color;
-	border-radius: 0.35em;
+	.col {
+		padding: 1em;
+		margin: 0 0.5em 0.8em;
+		border-radius: 2em;
+		border: 6px double rgba(251, 188, 11, 0.3);
 
-	&:hover {
-		background: $hover-color;
-		transition: 0.6s;
+		.button {
+			background: $accent-color;
+			padding: 0.625em 1.25em;
+			color: $secondary-color;
+			border-radius: 0.35em;
+
+			&:hover {
+				background: $hover-color;
+				transition: 0.6s;
+			}
+		}
 	}
+
+	.popular {
+
+		h3 {
+			@extend %p;
+		}
+
+		%p {
+			background: -webkit-linear-gradient(#1fbbde, #103752);
+  			-webkit-background-clip: text;
+  			-webkit-text-fill-color: transparent;
+		}
+  		
+	}
+
 }
 
 
@@ -212,7 +264,7 @@ footer {
 
 	.cake {
 		background-position: -435px -405px;
-		left: 80%;
+		left: 85%;
 		animation-delay: 0.1s;
 		transform: rotate(30deg);
 	}
@@ -222,14 +274,6 @@ footer {
 		80% { opacity: 0; }
 		100% { top: 150%; transform: rotate(360deg); opacity: 0; }
 	}
-
-
-
-
-
-
-
-
 
 }
 

@@ -17,6 +17,7 @@ TABLE OF CONTENTS:
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Handlee|Raleway:500");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -73,30 +74,61 @@ table {
 }
 
 body {
+	font-family: 'Raleway', sans-serif;
 	background: #fff;
 	color: #3a3a3a;
 	line-height: 1.6;
 }
 
+@media only screen and (min-width: 768px) {
+	body .main-header, body .row, body nav {
+		display: flex;
+	}
+	body .main-header {
+		flex-direction: column;
+		align-items: center;
+	}
+	body .col {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+	body .col .button {
+		align-self: flex-start;
+		margin-top: auto;
+	}
+	body .row {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	body .main-header {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
 p {
-	font-size: 0.9375em;
+	font-size: 0.9em;
 	margin: 0 0 1em 0;
 }
 
 h1 {
-	font-size: 1.35em;
-	color: #fff;
+	font-size: 1.8em;
 }
 
 h1 a {
 	text-align: center;
 	display: block;
 	padding: 10px 15px;
+	color: #9620ec;
 }
 
 h3 {
 	font-size: 1.5em;
-	color: #fff;
+	color: #9620ec;
 	padding-bottom: 1em;
 }
 
@@ -113,20 +145,34 @@ nav a {
 	display: block;
 	padding: 10px 15px;
 	text-transform: uppercase;
-	color: #3acec2;
+	color: #fe0000;
 	font-size: 0.95em;
 }
 
 nav a:hover {
-	color: #093a58;
+	color: #f396e6;
 	transition: 0.8s;
 }
 
 footer {
+	background: linear-gradient(0deg, #e69ddd, #91ddee, #eed891);
+	background-size: 600% 600%;
+	animation: ani-bg 6s ease infinite;
 	text-align: center;
-	background: #d9e4ea;
 	padding: 2em 0;
 	margin-top: 30px;
+}
+
+@keyframes ani-bg {
+	0% {
+		background-position: 50% 0%;
+	}
+	50% {
+		background-position: 51% 100%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}
 }
 
 /* 2. Content ================================= */
@@ -135,16 +181,16 @@ footer {
 }
 
 .hero {
-	text-align: center;
 	background: linear-gradient(0deg, #e69ddd, #91ddee, #eed891);
 	background-size: 600% 600%;
-	animation: ani-hero 6s ease infinite;
+	animation: ani-bg 6s ease infinite;
+	text-align: center;
 	color: #fff;
 	padding: 3.2em 0;
 	margin-bottom: 48px;
 }
 
-@keyframes ani-hero {
+@keyframes ani-bg {
 	0% {
 		background-position: 50% 0%;
 	}
@@ -169,26 +215,36 @@ footer {
 }
 
 .hero .headline {
-	font-size: 2em;
+	font-size: 3em;
 }
 
-.col {
-	background: #d9e4ea;
+.hero span {
+	font-size: 1.2em;
+}
+
+.row .col {
 	padding: 1em;
 	margin: 0 0.5em 0.8em;
-	border-radius: 0.35em;
+	border-radius: 2em;
+	border: 6px double rgba(251, 188, 11, 0.3);
 }
 
-.button {
-	background: #3acec2;
+.row .col .button {
+	background: #fe0000;
 	padding: 0.625em 1.25em;
 	color: #fff;
 	border-radius: 0.35em;
 }
 
-.button:hover {
-	background: #093a58;
+.row .col .button:hover {
+	background: #f396e6;
 	transition: 0.6s;
+}
+
+.row .popular h3 {
+	background: -webkit-linear-gradient(#1fbbde, #103752);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .candy-rain .drop {
@@ -255,7 +311,7 @@ footer {
 
 .candy-rain .cake {
 	background-position: -435px -405px;
-	left: 80%;
+	left: 85%;
 	animation-delay: 0.1s;
 	transform: rotate(30deg);
 }
