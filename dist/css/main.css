@@ -17,7 +17,8 @@ TABLE OF CONTENTS:
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Handlee|Raleway:500");
+@import url("https://fonts.googleapis.com/css?family=Capriola|Fontdiner+Swanky");
+@import url("https://fonts.googleapis.com/css?family=Fontdiner+Swanky");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -74,8 +75,9 @@ table {
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
-	background: #fff;
+	font-family: 'Capriola', sans-serif;
+	background: url(../../src/img/candy-bg.jpg) no-repeat fixed;
+	background-size: cover;
 	color: #3a3a3a;
 	line-height: 1.6;
 }
@@ -117,6 +119,7 @@ p {
 
 h1 {
 	font-size: 1.8em;
+	font-family: 'Fontdiner Swanky', cursive;
 }
 
 h1 a {
@@ -128,7 +131,7 @@ h1 a {
 
 h3 {
 	font-size: 1.5em;
-	color: #9620ec;
+	color: #fff;
 	padding-bottom: 1em;
 }
 
@@ -216,6 +219,7 @@ footer {
 
 .hero .headline {
 	font-size: 3em;
+	font-family: 'Fontdiner Swanky', cursive;
 }
 
 .hero span {
@@ -226,7 +230,8 @@ footer {
 	padding: 1em;
 	margin: 0 0.5em 0.8em;
 	border-radius: 2em;
-	border: 6px double rgba(251, 188, 11, 0.3);
+	border: 6px double rgba(228, 144, 218, 0.2);
+	background: rgba(251, 188, 11, 0.9);
 }
 
 .row .col .button {

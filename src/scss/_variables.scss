@@ -11,6 +11,9 @@ $hover-color: #f396e6;
 
 $em-size: 1em;
 
+$header-font: 'Fontdiner Swanky', cursive;
+$body-font: 'Capriola', sans-serif;
+
 @mixin bp-tablet {
 	@media only screen and (min-width: $tablet-breakpoint) {
 		@content;
