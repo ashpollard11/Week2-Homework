@@ -3,35 +3,64 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title> ¯\_(ツ)_/¯ </title>
+		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="dist/css/main.css">
 
-		<!--
-			Do I work in src or dist?
-			Newbies work in dist, smarty-pants gulp users work in src.
-			Go here to learn more:
-			https://stackoverflow.com/questions/23730882/what-is-the-role-of-src-and-dist-folders
-		-->
 		
 	</head>
 	<body>
 		
-		<div class="content">
-			<img class="logo" src="dist/img/logo.png" alt="Circus Logo">
-			<div class="foreground">
-				<h1>Hello World!</h1>
-				<p>Yep, you've got the Circus Starter project working.</p>
-				<p>Congratulations! You're ready to code.</p>
-				<p class="github">
-					<a target="_blank" href="https://github.com/CreativeCircus/circus-starter">https://github.com/CreativeCircus/circus-starter</a>
-				</p>
-				<code>1.4.4</code>
-			</div>
-			<div class="background"></div>
+		<header class="main-header">
+		<h1><a href="">Sweet Treats</a></h1>
+		<nav>
+			<li><a href="">Ice Cream</a></li>
+			<li><a href="">Donuts</a></li>
+			<li><a href="">Chocolate</a></li>
+			<li><a href="">Candy</a></li>
+		</nav>
+		<ul class="candy-rain">
+			<li class="cupcake drop"></li>
+			<li class="cookies drop"></li>
+			<li class="pie drop"></li>
+			<li class="lolipop drop"></li>
+			<li class="croissant drop"></li>
+			<li class="icecream drop"></li>
+			<li class="candy drop"></li>
+			<li class="choco drop"></li>
+			<li class="cake drop"></li>
+		</ul>
+	</header>
+
+	<div class="hero">
+		<img src="src/img/peppermint-logo.png" alt="peppermint" class="peppermint-img">
+		<h2 class="headline">Sweet Treats Delivery</h2>
+		<span>Sugary delights to your home at your leisure!</span>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<h3>Simply Sweet: $16.95 Per Month</h3>
+			<p>Choose from a variety of sugary goodness that fits in our smallest box!</p>
+			<a href="" class="button">Choose Your Treats</a>
 		</div>
+		<div class="col">
+			<h3>Yummy Fun: $21.95 Per Month </h3>
+			<p>Fill up with all the yummies that fit in our most popular box!</p>
+			<a href="" class="button">Choose Your Treats</a>
+		</div>
+		<div class="col">
+			<h3>Jumbo Delicious: $25.95 Per Month</h3>
+			<p>Indulge on a smorgasbord of treats in this massive box!</p>
+			<a href="" class="button">Choose Your Treats</a>
+		</div> <!-- row ends -->
+	</div>
+
+	<footer>
+		<span>&copy;2018 The Yummiest Overlord of Sugar.</span>
+	</footer>
 
 		<script src="dist/js/main.js"></script>
 
