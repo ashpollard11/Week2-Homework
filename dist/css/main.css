@@ -241,7 +241,7 @@ footer {
 	background: rgba(251, 188, 11, 0.9);
 }
 
-.row .col .button {
+.row .button {
 	background: #fe0000;
 	padding: 01em 1.25em;
 	border-radius: 0.35em;
@@ -250,18 +250,73 @@ footer {
 	border: none;
 }
 
-.row .col .button:hover {
+.row .button:hover {
 	background: #f396e6;
 	transition: 0.6s;
 }
 
-.row .col .button a {
+.row .button a {
 	color: #fff;
 }
 
 .sign-up-description .sub-header {
 	color: #f396e6;
 	width: 100%;
+	margin-left: 0.4em;
+}
+
+.sign-up-description h4 {
+	font-size: 24px;
+	margin-bottom: 1em;
+}
+
+.sign-up-description p {
+	line-height: 1.5;
+}
+
+.sign-up-form {
+	line-height: 2;
+}
+
+.sign-up-form h4 {
+	font-size: 23px;
+}
+
+.sign-up-form h4 span {
+	color: #fff;
+}
+
+.sign-up-form .selection-cont {
+	float: left;
+}
+
+.sign-up-form .selection-cont:nth-child(8) {
+	margin-bottom: 1em;
+}
+
+.sign-up-form .selection-cont #title {
+	color: #9620ec;
+	width: 75px;
+	height: 25px;
+}
+
+.sign-up-form .selection-cont .text-input {
+	width: 150px;
+	height: 20px;
+	border: none;
+	border-radius: 3px;
+}
+
+.sign-up-form .selection-cont #email {
+	width: 250px;
+}
+
+.sign-up-form .selection-cont #marketing-emails {
+	border: none;
+}
+
+.sign-up-form .button {
+	color: #fff;
 }
 
 .candy-rain .drop {
