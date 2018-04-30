@@ -59,14 +59,7 @@ body {
 				font-family: $body-font;
 				}
 			}
-
 		}
-
-		
-
-		
-
-		
 	}
 
 	@include bp-desktop {
@@ -145,7 +138,6 @@ footer {
 }
 
 .hero{
-
 	@include gradient;
 	text-align: center;
 	color: $secondary-color;
