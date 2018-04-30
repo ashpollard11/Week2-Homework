@@ -35,7 +35,7 @@ body {
 	line-height: 1.6;
 
 	@include bp-tablet {
-		.main-header, .row, nav{
+		.main-header, nav, .row, .col{
 			display: flex;
 		}
 
@@ -44,21 +44,29 @@ body {
 			align-items: center;
 		}
 
-		.col {
-			display: flex;
-			flex-direction: column;
-			flex: 1;
-		}
-
-		.col .button {
-			align-self: flex-start;
-			margin-top: auto;
-		}
-
 		.row{
 			width: 90%;
 			margin: 0 auto;
+			flex-flow: row wrap;
+
+			.col {
+			flex-direction: column;
+			flex: 1;
+
+				.button {
+				align-self: flex-start;
+				margin-top: auto;
+				font-family: $body-font;
+				}
+			}
+
 		}
+
+		
+
+		
+
+		
 	}
 
 	@include bp-desktop {
@@ -88,7 +96,7 @@ h1 {
 
 }
 
-h3 {
+.sub-header {
 	font-size: $em-size + 0.5em;
 	color: $secondary-color;
 	padding-bottom: $em-size;
@@ -160,7 +168,7 @@ footer {
 		font-family: $header-font;
 	}
 
-	span {
+	p {
 		font-size: $em-size + 0.2;
 	}
 }
@@ -176,13 +184,19 @@ footer {
 
 		.button {
 			background: $accent-color;
-			padding: 0.625em 1.25em;
-			color: $secondary-color;
+			padding: 01em 1.25em;
 			border-radius: 0.35em;
+			background: #fe0000;
+			font-size: 0.85em;
+			border: none;
 
 			&:hover {
 				background: $hover-color;
 				transition: 0.6s;
+			}
+
+			a {
+				color: $secondary-color;
 			}
 		}
 	}
@@ -197,6 +211,15 @@ footer {
 			@extend %text-gradient;
 		}
   		
+	}
+
+}
+
+.sign-up-description {
+
+	.sub-header {
+		color: $hover-color;
+		width: 100%;
 	}
 
 }

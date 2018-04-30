@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Sweet Treats</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="dist/css/main.css">
+	</head>
+	<body>
+		
+		<header class="main-header">
+			<h1><a href="index.html">Sweet Treats</a></h1>
+			<nav>
+				<li><a href="">Ice Cream</a></li>
+				<li><a href="">Donuts</a></li>
+				<li><a href="">Chocolate</a></li>
+				<li><a href="">Candy</a></li>
+			</nav>
+		</header>
+
+		<div class="row sign-up-description">
+			<h3 class="sub-header">Let's be sweet friends!</h3>
+			<div class="col">
+				<h3>Your order summary</h3>
+				<p>You will receive a variety box filled with treats and flavors of your choosing.</p>
+				<p>Your first box is half price, and the next box will be full, and there on after.</p>
+				<p class="important-text">You may cancel your monthly subscription at any time.</p>
+				<p></p>
+			</div>
+			<!-- row ends -->
+
+		<form class="col">
+			<h4><span>1 of 3 </span>- Your details</h4>
+			<h5>Please tell us your name, email address and choose a password…</h5>
+			<div class="selection-cont">
+				<label for="title">Title</label>
+				<select name="title" id="title">
+					<option value="">None</option>
+					<option value="Mrs">Mrs</option>
+					<option value="Miss">Miss</option>
+					<option value="Ms">Ms</option>
+					<option value="Mr">Mr</option>
+				</select>
+			</div>
+
+			<div class="selection-cont">
+				<label for="first_name">First Name</label>
+				<input type="text" name="first_name" id="first_name">
+			</div>
+
+			<div class="selection-cont">
+				<label for="last_name">Last Name</label>
+				<input type="text" name="last_name" id="last_name">
+			</div>
+
+			<div class="selection-cont">
+				<label for="email">Email Address</label>
+				<input type="email" name="email" id="email" placeholder="example@emailaddress.com">
+			</div>
+
+			<div class="selection-cont">
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password">
+			</div>
+
+			<div class="selection-cont">
+				<input type="checkbox" name="marketing_emails" id="marketing_emails" value="1">
+				<label for="marketing_emails">Check this box if you do not want us to harass you with a thousand marketing emails per day</label>
+			</div>
+
+			<button type="submit" class="button">Continue </button>
+
+		</form>
+
+		</div>
+
+		<footer>
+			<span>&copy;2018 The Yummiest Overlord of Sugar.</span>
+		</footer>
+
+		<script src="dist/js/main.js"></script>
+
+	</body>
+</html>

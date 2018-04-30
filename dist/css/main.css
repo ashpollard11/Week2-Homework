@@ -89,25 +89,26 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-	body .main-header, body .row, body nav {
+	body .main-header, body nav, body .row, body .col {
 		display: flex;
 	}
 	body .main-header {
 		flex-direction: column;
 		align-items: center;
 	}
-	body .col {
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-	}
-	body .col .button {
-		align-self: flex-start;
-		margin-top: auto;
-	}
 	body .row {
 		width: 90%;
 		margin: 0 auto;
+		flex-flow: row wrap;
+	}
+	body .row .col {
+		flex-direction: column;
+		flex: 1;
+	}
+	body .row .col .button {
+		align-self: flex-start;
+		margin-top: auto;
+		font-family: "Capriola", sans-serif;
 	}
 }
 
@@ -135,7 +136,7 @@ h1 a {
 	color: #9620ec;
 }
 
-h3 {
+.sub-header {
 	font-size: 1.5em;
 	color: #fff;
 	padding-bottom: 1em;
@@ -228,7 +229,7 @@ footer {
 	font-family: "Fontdiner Swanky", cursive;
 }
 
-.hero span {
+.hero p {
 	font-size: 1.2em;
 }
 
@@ -242,14 +243,25 @@ footer {
 
 .row .col .button {
 	background: #fe0000;
-	padding: 0.625em 1.25em;
-	color: #fff;
+	padding: 01em 1.25em;
 	border-radius: 0.35em;
+	background: #fe0000;
+	font-size: 0.85em;
+	border: none;
 }
 
 .row .col .button:hover {
 	background: #f396e6;
 	transition: 0.6s;
+}
+
+.row .col .button a {
+	color: #fff;
+}
+
+.sign-up-description .sub-header {
+	color: #f396e6;
+	width: 100%;
 }
 
 .candy-rain .drop {
