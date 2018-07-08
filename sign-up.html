@@ -22,7 +22,7 @@
 		</header>
 
 		<div class="row sign-up-description">
-			<h3 class="sub-header">Let's be sweet friends!</h3>
+			<!-- <h3 class="sub-header">Let's be sweet friends!</h3> -->
 			<div class="col">
 				<h4>Your order summary</h4>
 				<p>You will receive a variety box filled with treats and flavors of your choosing.</p>
@@ -32,10 +32,10 @@
 			</div>
 
 		<form class="col sign-up-form">
-			<h4><span>1 of 3 </span>- Your details</h4>
+			<h4><span>1 of 3 </span>&mdash; Your details</h4>
 			<h5>Please tell us your name, email address and choose a password…</h5>
-			<div class="selection-cont">
-				<label for="title">Title</label>
+
+			<label for="title">Title
 				<select name="title" id="title">
 					<option value="">None</option>
 					<option value="Mrs">Mrs</option>
@@ -43,34 +43,34 @@
 					<option value="Ms">Ms</option>
 					<option value="Mr">Mr</option>
 				</select>
-			</div>
+			</label>
 
-			<div class="selection-cont">
-				<label for="first_name">First Name</label>
+			<label>
+				First Name
 				<input type="text" name="first_name" id="first_name" class="text-input">
-			</div>
+			</label>
 
-			<div class="selection-cont">
-				<label for="last_name">Last Name</label>
+			<label>
+				Last Name
 				<input type="text" name="last_name" id="last_name" class="text-input">
-			</div>
+			</label>
 
-			<div class="selection-cont">
-				<label for="email">Email Address</label>
+			<label>
+				Email
 				<input type="email" name="email" id="email" placeholder="example@emailaddress.com" class="text-input">
-			</div>
+			</label>
 
-			<div class="selection-cont">
-				<label for="password">Password</label>
+			<label>
+				Password
 				<input type="password" name="password" id="password" class="text-input">
-			</div>
-
-			<div class="selection-cont">
+			</label>
+				
+			<label>
 				<input type="checkbox" name="marketing_emails" id="marketing_emails" value="1">
-				<label for="marketing_emails">Check this box if you do not want us to harass you with a thousand marketing emails per day.</label>
-			</div>
+				Check this box if you do not want us to harass you with a thousand marketing emails per day.
+			</label>
 
-			<button type="submit" class="button">Continue </button>
+			<button type="submit" class="button">Continue</button>
 
 		</form>
 

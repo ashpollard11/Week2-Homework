@@ -105,6 +105,9 @@ body {
 		flex-direction: column;
 		flex: 1;
 	}
+	body .row .col .sub-header {
+		height: 90px;
+	}
 	body .row .col .button {
 		align-self: flex-start;
 		margin-top: auto;
@@ -116,6 +119,16 @@ body {
 	body .main-header {
 		flex-direction: row;
 		justify-content: space-around;
+	}
+	body .sign-up-form .button {
+		align-self: flex-end;
+	}
+}
+
+@media only screen and (min-height: 1024px) {
+	body footer {
+		position: fixed;
+		bottom: 0;
 	}
 }
 
@@ -169,8 +182,12 @@ footer {
 	background-size: 600% 600%;
 	animation: ani-bg 6s ease infinite;
 	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 2em 0;
-	margin-top: 30px;
+	margin-top: 8%;
 }
 
 @keyframes ani-bg {
@@ -183,6 +200,10 @@ footer {
 	100% {
 		background-position: 50% 0%;
 	}
+}
+
+footer p {
+	margin: 0;
 }
 
 /* 2. Content ================================= */
@@ -248,6 +269,7 @@ footer {
 	background: #fe0000;
 	font-size: 0.85em;
 	border: none;
+	color: #fff;
 }
 
 .row .button:hover {
@@ -257,6 +279,14 @@ footer {
 
 .row .button a {
 	color: #fff;
+}
+
+.sign-up-description {
+	padding-top: 2em;
+}
+
+.sign-up-description .col {
+	height: max-content;
 }
 
 .sign-up-description .sub-header {
@@ -275,6 +305,8 @@ footer {
 }
 
 .sign-up-form {
+	display: flex;
+	flex-direction: column;
 	line-height: 2;
 }
 
@@ -286,33 +318,45 @@ footer {
 	color: #fff;
 }
 
-.sign-up-form .selection-cont {
-	float: left;
+.sign-up-form h5 {
+	line-height: 1.5;
 }
 
-.sign-up-form .selection-cont:nth-child(8) {
-	margin-bottom: 1em;
+.sign-up-form label {
+	display: flex;
 }
 
-.sign-up-form .selection-cont #title {
+.sign-up-form label:nth-child(8) {
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.sign-up-form #title {
 	color: #9620ec;
 	width: 75px;
 	height: 25px;
+	border: none;
+	background: #fff;
 }
 
-.sign-up-form .selection-cont .text-input {
+.sign-up-form #title, .sign-up-form .text-input {
+	margin-left: auto;
+}
+
+.sign-up-form .text-input {
 	width: 150px;
 	height: 20px;
 	border: none;
 	border-radius: 3px;
 }
 
-.sign-up-form .selection-cont #email {
-	width: 250px;
+.sign-up-form #email {
+	width: 180px;
 }
 
-.sign-up-form .selection-cont #marketing-emails {
+.sign-up-form #marketing-emails {
 	border: none;
+	font-size: 20px;
 }
 
 .sign-up-form .button {
@@ -330,7 +374,7 @@ footer {
 
 .candy-rain .cupcake {
 	background-position: -38px -28px;
-	left: 1%;
+	left: 3%;
 	animation-delay: 0.9s;
 	transform: rotate(45deg);
 }
@@ -383,7 +427,7 @@ footer {
 
 .candy-rain .cake {
 	background-position: -435px -405px;
-	left: 85%;
+	left: 83%;
 	animation-delay: 0.1s;
 	transform: rotate(30deg);
 }
@@ -396,7 +440,7 @@ footer {
 		opacity: 0;
 	}
 	100% {
-		top: 100%;
+		top: 90%;
 		transform: rotate(360deg);
 		opacity: 0;
 		display: none;

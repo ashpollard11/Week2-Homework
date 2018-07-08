@@ -53,6 +53,10 @@ body {
 			flex-direction: column;
 			flex: 1;
 
+				.sub-header {
+					height: 90px;
+				}
+
 				.button {
 				align-self: flex-start;
 				margin-top: auto;
@@ -68,6 +72,18 @@ body {
 			justify-content: space-around;
 		}
 
+		.sign-up-form {
+			.button {
+				align-self: flex-end;
+			}
+		}
+	}
+
+	@include bp-large-desktop {
+		footer {
+			position: fixed;
+			bottom: 0;
+		}
 	}
 
 }
@@ -123,8 +139,16 @@ nav {
 footer {
 	@include gradient;
 	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 2em 0;
-	margin-top: 30px;
+	margin-top: 8%;
+
+	p {
+		margin: 0;
+	}
 }
 
 
@@ -133,11 +157,11 @@ footer {
 
 
 
-.main-header{
+.main-header {
 	padding: 0.5em 0;
 }
 
-.hero{
+.hero {
 	@include gradient;
 	text-align: center;
 	color: $secondary-color;
@@ -182,6 +206,7 @@ footer {
 		background: #fe0000;
 		font-size: 0.85em;
 		border: none;
+		color: #fff;
 
 		&:hover {
 			background: $hover-color;
@@ -209,6 +234,11 @@ footer {
 }
 
 .sign-up-description {
+	padding-top: 2em;
+
+	.col {
+		height: max-content;
+	}
 
 	.sub-header {
 		color: $hover-color;
@@ -227,6 +257,8 @@ footer {
 }
 
 .sign-up-form {
+	display: flex;
+	flex-direction: column;
 	line-height: 2;
 
 	h4 {
@@ -236,40 +268,51 @@ footer {
 		}
 	}
 
-	.selection-cont {
-		float: left;
+	h5 {
+		line-height: 1.5;
+	}
+
+	label {
+		display: flex;
 
 		&:nth-child(8) {
-			margin-bottom: $em-size;
+			line-height: 1.5;
+			margin-bottom: 20px;
 		}
+		
+	}
 
-		#title {
+	#title {
 		color: $heading-color;
 		width: 75px;
   		height: 25px;
-		}
+  		border: none;
+  		background: #fff;
+	}
 
-		.text-input {
-			width: 150px;
-			height: 20px;
-			border: none;
-			border-radius: 3px;
-		}
+	#title, .text-input {
+		margin-left: auto;
+	}
 
-		#email {
-			width: 250px;
-		}
+	.text-input {
+		width: 150px;
+		height: 20px;
+		border: none;
+		border-radius: 3px;
+	}
 
-		#marketing-emails {
-			border: none;
-		}
+	#email {
+		width: 180px;
+	}
+
+	#marketing-emails {
+		border: none;
+		font-size: 20px;
 	}
 
 	.button {
 		color: $secondary-color;
 	}	
-
-	
 }
 
 
@@ -285,7 +328,7 @@ footer {
 
 	.cupcake {
 		background-position: -38px -28px;
-		left: 1%;
+		left: 3%;
 		animation-delay: 0.9s;
 		transform: rotate(45deg);
 	}
@@ -338,7 +381,7 @@ footer {
 
 	.cake {
 		background-position: -435px -405px;
-		left: 85%;
+		left: 83%;
 		animation-delay: 0.1s;
 		transform: rotate(30deg);
 	}
@@ -346,7 +389,7 @@ footer {
 	@keyframes ani-drop {
 		0% { top: -100%; }
 		80% { opacity: 0; }
-		100% { top: 100%; transform: rotate(360deg); opacity: 0; display: none; }
+		100% { top: 90%; transform: rotate(360deg); opacity: 0; display: none; }
 	}
 
 }
